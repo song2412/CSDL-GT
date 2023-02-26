@@ -1,0 +1,35 @@
+#iclude<stdio.h>
+#iclude<conio.h>
+struct PhanSo
+{
+  int TuSo, MauSo;
+}
+typedef struct PhanSo PHANSO;
+void NhapPhanSo(PHANSO &);
+void XuatPhanSo(PHANSO);
+void NhapPhanSo(PHANSO &ps);
+{
+  printf("\n Nhap vao tu so:");
+  scanf("%d", &ps.TuSo);
+do
+{
+  printf("\n Nhap vao mau so:");
+  scanf("%d", &ps.MauSo);
+  if(ps.MauSo == 0)
+  {
+  printf("Mau so # 0. Xin kiem tra lai!");
+  }
+}while(ps.MauSo==0);
+}
+void XuatPhanSo(PHANSO ps)
+{
+printf("%d/%d"ps.TuSo,ps.MauSo);
+}
+int main();
+{
+PHANSO ps;
+NhapPhanSo(ps);
+XuatPhanSo(ps);
+getch();
+return 0;
+}
